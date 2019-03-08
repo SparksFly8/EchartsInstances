@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>柱状图</title>
+    <!--引入css样式表-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--1.引入echarts.js-->
+    <script src="echarts.js"></script>
+</head>
+<body>
+    <!--2.为ECharts准备一个具备大小(宽高)的DOM-->
+    <div id="bar_bottom" class="bar-wholeScreen"></div>
+    <script type="text/javascript">
+        // 3.基于准备好的dom，初始化echarts实例
+        var mychart = echarts.init(document.getElementById('bar_bottom'));
+        // 4.指定图表的option和data#}
+        mychart.title = '对比柱状图';
+        option = {
+            tooltip : {
+                trigger: 'axis',           // 可触发
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow',        // 默认为直线，可选为：'line' | 'shadow'| cross
+                    label: {
+                        backgroundColor: '#283b56'
+                    }
+                },
+            },
+            toolbox: {                     // 右上角的工具箱
+                show : true,
+                feature : {
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            legend: {
+                data: ['论文接收数','论文投递数']
+            },
+            grid: {   // 网格线
+                show: true,
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis:  {
+                name: '单位/篇',
+                nameLocation: 'center',
+                type: 'value',
+                position: 'top',
+                max: 1510,
+            },
+            yAxis: {
+                name: '国家',
+                type: 'category', // 离散值
+                data: ['意大利','加拿大','印度','德国','日本','澳大利亚','中国香港','新加坡','中国','美国'],
+            },
+            series: [
+                {
+                    barMinHeight:1,
+                    barWidth: 23,
+                    name: '论文接收数',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [14, 16, 17, 28, 30, 32, 32, 40, 265, 258]
+                },
+                {
+                    name: '论文投递数',
+                    type: 'bar',
+                    stack: '总量',
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'insideRight'
+                        }
+                    },
+                    data: [34, 69, 76, 68, 99, 128, 92,109,1242,934]
+                },
+            ]
+        };
+        mychart.setOption(option);
+    </script>
+</body>
+</html>
