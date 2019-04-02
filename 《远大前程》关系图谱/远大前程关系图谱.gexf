@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2019-04-02">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="class" title="class" type="integer"></attribute>
+      <attribute id="weight" title="weight" type="integer"></attribute>
+    </attributes>
+    <nodes>
+      <node id="0" label="洪三元">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-6.633527" y="-9.883903"></viz:position>
+      </node>
+      <node id="1" label="林依依">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-1.8086971" y="-14.707321"></viz:position>
+      </node>
+      <node id="2" label="于梦竹">
+        <attvalues>
+          <attvalue for="class" value="3"></attvalue>
+          <attvalue for="weight" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-24.19877" y="-3.184798"></viz:position>
+      </node>
+      <node id="3" label="齐林">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-18.976662" y="4.284331"></viz:position>
+      </node>
+      <node id="4" label="沈达">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-10.926031" y="-18.18121"></viz:position>
+      </node>
+      <node id="5" label="拐爷">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="0.39039508" y="0.60031575"></viz:position>
+      </node>
+      <node id="6" label="红葵花">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-0.8640064" y="-21.240658"></viz:position>
+      </node>
+      <node id="7" label="严华">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-9.770073" y="-31.69312"></viz:position>
+      </node>
+      <node id="8" label="梁兴义">
+        <attvalues>
+          <attvalue for="class" value="0"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-13.04761" y="-52.83213"></viz:position>
+      </node>
+      <node id="9" label="陆昱晟">
+        <attvalues>
+          <attvalue for="class" value="2"></attvalue>
+          <attvalue for="weight" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="6.797036" y="-0.18854529"></viz:position>
+      </node>
+      <node id="10" label="永鑫公司">
+        <attvalues>
+          <attvalue for="class" value="2"></attvalue>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="23.174334" y="22.188442"></viz:position>
+      </node>
+      <node id="11" label="黄尚">
+        <attvalues>
+          <attvalue for="class" value="2"></attvalue>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="24.091743" y="43.886677"></viz:position>
+      </node>
+      <node id="12" label="霍天洪">
+        <attvalues>
+          <attvalue for="class" value="2"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="29.718891" y="26.608202"></viz:position>
+      </node>
+      <node id="13" label="张万霖">
+        <attvalues>
+          <attvalue for="class" value="2"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="9.00425" y="23.067726"></viz:position>
+      </node>
+      <node id="14" label="夏俊林">
+        <attvalues>
+          <attvalue for="class" value="2"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="44.544197" y="18.959219"></viz:position>
+      </node>
+      <node id="15" label="八股党">
+        <attvalues>
+          <attvalue for="class" value="1"></attvalue>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="48.6103" y="43.816753"></viz:position>
+      </node>
+      <node id="16" label="沈青山">
+        <attvalues>
+          <attvalue for="class" value="1"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="56.275204" y="50.193993"></viz:position>
+      </node>
+      <node id="17" label="史双龄">
+        <attvalues>
+          <attvalue for="class" value="1"></attvalue>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="64.21824" y="57.362175"></viz:position>
+      </node>
+      <node id="18" label="于杭兴">
+        <attvalues>
+          <attvalue for="class" value="3"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-25.801563" y="-11.337113"></viz:position>
+      </node>
+      <node id="19" label="杜美慧">
+        <attvalues>
+          <attvalue for="class" value="3"></attvalue>
+          <attvalue for="weight" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-48.099407" y="-1.379359"></viz:position>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="夫妻" source="0" target="1" type="undirected" label="夫妻" weight="6.0"></edge>
+      <edge id="兄弟" source="0" target="3" type="undirected" label="兄弟" weight="2.0"></edge>
+      <edge id="义结金兰" source="0" target="4" type="undirected" label="义结金兰" weight="4.0"></edge>
+      <edge id="母子" source="0" target="6" type="undirected" label="母子" weight="3.0"></edge>
+      <edge id="师徒" source="0" target="9" type="undirected" label="师徒" weight="5.0"></edge>
+      <edge id="曾供职于" source="0" target="10" type="directed" label="曾供职于"></edge>
+      <edge id="准女婿" source="0" target="18" type="directed" label="准女婿" weight="2.0"></edge>
+      <edge id="喜欢并爱慕着" source="2" target="0" type="directed" label="喜欢" weight="4.0"></edge>
+      <edge id="父女" source="2" target="18" type="undirected" label="父女" weight="3.0"></edge>
+      <edge id="闺蜜" source="2" target="19" type="undirected" label="闺蜜"></edge>
+      <edge id="喜欢" source="3" target="2" type="directed" label="喜欢" weight="5.0"></edge>
+      <edge id="手下" source="3" target="13" type="undirected" label="师徒"></edge>
+      <edge id="曾经的元老级人物" source="5" target="10" type="directed" label="曾经的元老级人物"></edge>
+      <edge id="共产主义领路人" source="8" target="7" type="directed" label="共产主义领路人"></edge>
+      <edge id="三老板" source="9" target="10" type="directed" label="三老板" weight="2.0"></edge>
+      <edge id="上一代大老板" source="11" target="10" type="directed" label="上一代大老板"></edge>
+      <edge id="老大" source="12" target="10" type="directed" label="大老板" weight="4.0"></edge>
+      <edge id="二老板" source="13" target="10" type="directed" label="二老板" weight="3.0"></edge>
+      <edge id="师爷" source="14" target="10" type="directed" label="师爷"></edge>
+      <edge id="大老板" source="16" target="15" type="directed" label="大老板" weight="2.0"></edge>
+      <edge id="二当家" source="17" target="15" type="directed" label="二当家"></edge>
+      <edge id="死对头" source="10" target="15" type="undirected" label="死对头" weight="2.0"></edge>
+      <edge id="结拜大哥" source="7" target="0" type="directed" label="结拜大哥" weight="3.0"></edge>
+      <edge id="智多星" source="5" target="0" type="directed" label="智多星" weight="4.0"></edge>
+    </edges>
+  </graph>
+</gexf>

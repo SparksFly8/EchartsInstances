@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>远大前程主要人物关系图</title>
+    <script src="echarts.js"></script>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="dataTool.js"></script>
+    <style>
+        .bar-wholeScreen{
+            position: relative;
+            width: 100%;
+            height: 560px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bar_acceptRate" class="bar-wholeScreen"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('bar_acceptRate'));
+        myChart.showLoading();       // 在加载.gexf文件前先显示Loading页面
+        $.get('远大前程关系图谱.gexf', function (xml) {
+            myChart.hideLoading();   // 加载文件成功后隐藏(关闭)Loading页面
+            var graph = echarts.dataTool.gexf.parse(xml); // 解析原生图谱中的XML
+            var categories = [  // 类别定义,索引从0开始,故节点类别需是整数且从0开始
+                {
+                    name: '男主角的亲友团',
+                },
+                {
+                    name: '八股党主要成员',
+                },
+                {
+                    name: '永鑫公司主要成员',
+                },
+                {
+                    name: '于家',
+                },
+            ];
+            // 对于大规模网络结点数据,采用遍历每个结点,设置每个结点的样式,forEach即遍历
+            graph.nodes.forEach(function (node) {
+                node.itemStyle = {
+                    normal: {
+                        show: true,
+                    },
+                };
+                node.value = node.attributes.weight;
+                node.symbolSize = node.attributes.weight*3+20;  // 结点大小
+                node.label = {
+                    normal: {
+                        show: true,
+                        fontSize: 18,
+                        position: 'top',
+                        distance: 10,  // 节点标签距离图形元素的距离
+                        // backgroundColor: 'red',
+                        color: '#060606',
+                    },
+                };
+                node.category = node.attributes.class;
+            });
+            // 对于大规模网络结点关系数据,采用遍历每个边,设置每个边的样式,forEach即遍历
+            graph.links.forEach(function (link) {
+                link.itemStyle = null;
+                link.value = link.weight;
+                link.label = {
+                    show: true,
+                    formatter: '{b}' // 取边中的id
+                }
+            });
+            option = {
+                title: {
+                    text: '《远大前程》主要人物关系图谱',
+                    subtext: '关系图谱',
+                    top: 'bottom',
+                    left: 'right'
+                },
+                legend: [{
+                    data: categories.map(function (a) {
+                        return a.name;
+                    })
+                }],
+                // 工具箱配置
+                toolbox: {
+                    feature : {
+                        dataView: {show: true, readOnly: false}, // 数据视图
+                        restore: {show: true},                   // 还原，复位原始图表，
+                        saveAsImage: {show: true}                // 保存为图片，
+                    }
+                },
+                animationDuration: 1000,  // 初始动画的时长(延时)
+                series : [
+                    {
+                        name: '《远大前程》主要人物关系图谱',
+                        type: 'graph',
+                        top: '15%',
+                        layout: 'circular',     // 布局的算法,force类型为力导图,circular类型为环形布局
+                        data: graph.nodes,  // 节点的数据集
+                        links: graph.links, // 节点间的关系数据
+                        categories: categories, // 类别
+                        roam: true,         //鼠标缩放、平移
+                        draggable : false,  //节点是否可拖拽
+                        focusNodeAdjacency: true, //是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
+                        // 边两端的标记类型,可以是一个数组分别指定两端或单个统一指定,常见的可以设置为箭头.
+                        edgeSymbol: [null,'arrow'],
+                        edgeSymbolSize: 15, // 边两端的标记大小
+                        // 图形样式,有normal和emphasis两个状态.normal是图形在默认状态下的样式;emphasis是图形在鼠标悬浮或者图例联动高亮时下的样式。
+                        itemStyle: {    // 节点的样式设置
+                            normal: {
+                                borderColor: '#fff',  // 结点外边框颜色
+                                borderWidth: 1,       // 结点外边框宽度
+                                borderType: 'solid',  // 边框为实线
+                                shadowBlur: 10,       // 图形阴影的模糊大小
+                                shadowColor: 'rgba(0, 0, 0, 0.3)',
+                            }
+                        },
+                        edgeLabel: { // 边标签
+                            show: true,
+                            fontSize: 12,
+                        },
+                        lineStyle: {            // 关系边的样式设置
+                            color: 'source',    // 'source'取源节点颜色或者'target'取目标节点颜色作为自己颜色
+                            curveness: 0.3      // 边的曲度,支持从0到1的值,值越大曲度越大。
+                        },
+                        emphasis: {             // 高亮显示时的样式
+                            lineStyle: {
+                                width: 10
+                            }
+                        }
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        }, 'xml');
+    </script>
+</body>
+</html>
