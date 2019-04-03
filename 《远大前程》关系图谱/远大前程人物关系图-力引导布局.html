@@ -55,6 +55,16 @@
                         color: '#060606',
                     },
                 };
+                // 每个节点重写全局提示框
+                node.tooltip = {
+                    trigger: 'item', // 触发类型
+                    formatter: function (params) {  // 回调函数以调整提示框显示格式
+                        let des = '电视剧：《远大前程》'+'<br/>'+
+                                  '角色：'+params.name+'<br/>'+
+                                  '分类：'+(node.attributes.class+1);
+                        return des
+                    },
+                },
                 node.category = node.attributes.class;
             });
             // 对于大规模网络结点关系数据,采用遍历每个边,设置每个边的样式,forEach即遍历
@@ -78,6 +88,10 @@
                         return a.name;
                     })
                 }],
+                // 提示框,此处为全局配置,设为空,方便每个节点重写该配置项
+                tooltip: {
+                    formatter: '{b}' // 取边中的id
+                },
                 // 工具箱配置
                 toolbox: {
                     feature : {
@@ -86,7 +100,7 @@
                         saveAsImage: {show: true}                // 保存为图片，
                     }
                 },
-                animationDuration: 1000,  // 初始动画的时长(延时)
+                animationDuration: 1000,  // 初始动画的时长(你延时)
                 series : [
                     {
                         name: '《远大前程》主要人物关系图谱',
