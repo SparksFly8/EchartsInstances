@@ -1,5 +1,6 @@
 # 使用Echarts的一些实例
-
+![](https://img.shields.io/badge/license-MIT-success.svg)
+[![](https://img.shields.io/badge/Blog-SL_World-orange.svg)](https://blog.csdn.net/SL_World)
 
 ## 前言
 内含CSS和echarts.js,下载后可直接使用。
